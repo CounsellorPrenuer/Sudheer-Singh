@@ -38,7 +38,7 @@ async function populateSanity() {
   ];
 
   for (const item of content) {
-    await client.createOrReplace(item);
+    await client.createOrReplace(item as any);
   }
 
   console.log("Sanity populated successfully!");
