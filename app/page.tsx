@@ -13,7 +13,7 @@ export default async function Home() {
     <main className="min-h-screen bg-gray-50 text-gray-900 font-sans">
       <nav className="px-8 py-4 bg-white shadow flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center">
-          <Image src="/assets/logo.jpg" alt="Logo" width={50} height={50} className="rounded-md object-contain mr-4" />
+          <Image src="/Sudheer-Singh/assets/logo.jpg" alt="Logo" width={50} height={50} className="rounded-md object-contain mr-4" />
           <span className="font-bold text-xl text-blue-800">Sudheer Singh</span>
         </div>
         <div className="flex gap-6 font-semibold text-gray-700">
@@ -44,7 +44,7 @@ export default async function Home() {
       <section id="about" className="py-24 px-8 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
         <div className="flex-1 w-full flex justify-center md:justify-end relative">
           <div className="absolute inset-0 bg-blue-100 rounded-full transform -translate-x-4 translate-y-4 -z-10" style={{ width: "400px", height: "400px" }}></div>
-          <Image src="/assets/founder.jpg" alt="Founder" width={400} height={400} className="rounded-full shadow-2xl object-cover border-4 border-white z-10" />
+          <Image src="/Sudheer-Singh/assets/founder.jpg" alt="Founder" width={400} height={400} className="rounded-full shadow-2xl object-cover border-4 border-white z-10" />
         </div>
         <div className="flex-1 w-full text-center md:text-left">
           <h2 className="text-4xl font-extrabold mb-6 text-blue-900">{about?.title || "Meet Sudheer Singh"}</h2>
@@ -124,6 +124,28 @@ export default async function Home() {
               <h3 className="text-gray-400 mb-2">Call Us</h3>
               <p className="font-bold text-xl">{contact?.phone || "+91 98765 43210"}</p>
             </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-white text-gray-900 p-8 rounded-2xl shadow-xl text-left max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-blue-900 text-center">Send a Message</h3>
+            <form className="space-y-4">
+              <div>
+                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
+                <input type="text" id="name" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="John Doe" required />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+                <input type="email" id="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="john@example.com" required />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-1">Your Message</label>
+                <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all resize-none" placeholder="How can we help you?" required></textarea>
+              </div>
+              <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition-colors shadow-lg mt-4">
+                Submit Message
+              </button>
+            </form>
           </div>
         </div>
       </section>
