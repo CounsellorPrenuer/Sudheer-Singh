@@ -37,16 +37,66 @@ export default async function Home() {
         </ul>
       </section>
 
-      <section id="mentoria" className="p-16">
-        <h2 className="text-3xl font-bold mb-4">Mentoria Packages</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1,2,3,4,5,6].map(i => (
-            <div key={i} className="border p-4 rounded shadow bg-white flex flex-col items-center">
-              <Image src={`/assets/Mentoria${i}.png`} alt={`Package ${i}`} width={300} height={400} />
-              <h3 className="text-xl font-bold mt-4">Package {i}</h3>
-              <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Buy Now</button>
+      <section id="mentoria" className="p-16 bg-gray-50 flex flex-col items-center">
+        <h2 className="text-3xl font-bold mb-8">Mentoria's Plans</h2>
+        
+        {/* Toggle Bar */}
+        <div className="flex bg-white rounded-md shadow max-w-4xl w-full mb-8 overflow-hidden text-sm md:text-base font-semibold border border-gray-200">
+          <div className="flex-1 bg-blue-600 text-white text-center py-4 cursor-pointer">8-9 STUDENTS</div>
+          <div className="flex-1 text-blue-600 text-center py-4 border-l cursor-pointer hover:bg-gray-50">10-12 STUDENTS</div>
+          <div className="flex-1 text-blue-600 text-center py-4 border-l cursor-pointer hover:bg-gray-50">COLLEGE GRADUATES</div>
+          <div className="flex-1 text-blue-600 text-center py-4 border-l cursor-pointer hover:bg-gray-50">WORKING PROFESSIONALS</div>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="flex flex-col md:flex-row gap-8 max-w-5xl w-full justify-center">
+          
+          {/* Standard Card */}
+          <div className="flex-1 bg-white border border-gray-200 rounded-xl p-8 shadow-sm flex flex-col relative">
+            <div className="text-blue-400 font-bold mb-4 tracking-wider text-sm">STANDARD</div>
+            <h3 className="text-blue-500 font-bold text-2xl text-center">Discover</h3>
+            <div className="text-center text-blue-500 font-bold text-4xl my-4">
+              <span className="text-lg">₹</span> 5,500
             </div>
-          ))}
+            
+            <ul className="flex-1 mt-6 space-y-4 text-sm text-gray-600">
+              <li className="flex items-start gap-2"><span className="text-blue-500 font-bold">✓</span> Psychometric assessment to measure your interests</li>
+              <li className="flex items-start gap-2"><span className="text-blue-500 font-bold">✓</span> 1 career counselling session with Mentoria's expert career coaches</li>
+              <li className="flex items-start gap-2"><span className="text-blue-500 font-bold">✓</span> Lifetime access to Knowledge Gateway</li>
+              <li className="flex items-start gap-2"><span className="text-blue-500 font-bold">✓</span> Invites to live webinars by industry experts</li>
+              <li className="flex items-start gap-2 opacity-50 line-through"><span className="text-blue-500 font-bold">✕</span> Customised reports after each session with education pathways</li>
+              <li className="flex items-start gap-2 opacity-50 line-through"><span className="text-blue-500 font-bold">✕</span> Guidance on studying abroad</li>
+              <li className="flex items-start gap-2 opacity-50 line-through"><span className="text-blue-500 font-bold">✕</span> CV building during internships/graduation</li>
+            </ul>
+            
+            <button className="mt-8 w-full bg-blue-400 hover:bg-blue-500 text-white font-bold py-3 rounded-full transition-colors">
+              BUY NOW
+            </button>
+          </div>
+
+          {/* Premium Card */}
+          <div className="flex-1 bg-white border border-gray-200 rounded-xl p-8 shadow-lg flex flex-col relative">
+            <div className="text-blue-500 font-bold mb-4 tracking-wider text-sm">PREMIUM</div>
+            <h3 className="text-blue-600 font-bold text-2xl text-center">Discover plus+</h3>
+            <div className="text-center text-blue-600 font-bold text-4xl my-4">
+              <span className="text-lg">₹</span> 15,000
+            </div>
+            
+            <ul className="flex-1 mt-6 space-y-4 text-sm text-gray-600">
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Psychometric assessments to measure your interests, personality and abilities</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> 8 career counselling sessions (1 every year) with Mentoria's expert career coaches until graduation</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Lifetime access to Knowledge Gateway</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Invites to live webinars by industry experts</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Customised reports after each session with education pathways</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> Guidance on studying abroad</li>
+              <li className="flex items-start gap-2"><span className="text-blue-600 font-bold">✓</span> CV building during internships/graduation</li>
+            </ul>
+            
+            <button className="mt-8 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-full transition-colors">
+              BUY NOW
+            </button>
+          </div>
+
         </div>
       </section>
 
